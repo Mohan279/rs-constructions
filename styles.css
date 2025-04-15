@@ -727,4 +727,90 @@
 /* Override any remaining transform effects */
 *:hover {
     transform: none !important;
-} 
+}
+
+/* Custom Form Styling */
+.custom-form {
+    width: 100%;
+    max-width: 100%;
+}
+
+.custom-form .form-group {
+    margin-bottom: 20px;
+}
+
+.custom-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.custom-form input,
+.custom-form select,
+.custom-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+}
+
+.custom-form input:focus,
+.custom-form select:focus,
+.custom-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: none;
+}
+
+.custom-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.custom-form .submit-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.custom-form .submit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Form validation styling (without red border) */
+.custom-form input:invalid,
+.custom-form textarea:invalid {
+    border-color: #ddd; /* Revert to default border color */
+}
+
+.custom-form input:focus:invalid,
+.custom-form textarea:focus:invalid {
+    border-color: var(--accent-color); /* Use standard focus color */
+}
+
+@media (max-width: 768px) {
+    .custom-form input,
+    .custom-form select,
+    .custom-form textarea {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+    
+    .custom-form .submit-btn {
+        padding: 12px 20px;
+        width: 100%;
+    }
+}
